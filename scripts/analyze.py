@@ -1,14 +1,13 @@
 """Aggregate real Claude Code usage from ~/.claude/projects into docs/stats.json.
 Counts only; no prompt or response text is read into the output."""
-import json, glob, os, collections, sys
+import json, glob, os, collections, sys, re
 from datetime import datetime
 
 ROOT = os.path.expanduser("~/.claude/projects")
 OUT = sys.argv[1] if len(sys.argv) > 1 else "docs/stats.json"
-HOME = "-Users-user-"
 
 def proj(d):
-    d = d.replace(HOME, "")
+    d = re.sub(r"^-(Users|home)-[^-]+-", "", d)
     if "Library-Application-Support-Claude" in d: return "Claude desktop scratch"
     for p in ("Documents-projects-colabrex-", "Documents-projects-wmc-", "Documents-projects-", "Downloads-"):
         if d.startswith(p): return d[len(p):] or "colabrex (root)"
