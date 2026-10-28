@@ -46,7 +46,6 @@ fetch('stats.json').then(r=>r.json()).then(d=>{
    <div class="card"><div class="n">${d.subagent_runs}</div><div class="l">Subagent runs</div></div>
    <div class="card"><div class="n">${d.pr_links}</div><div class="l">PR links</div></div>
   </div>
-  <div class="note">Every number is counted from the session transcripts by <a style="color:var(--acc)" href="https://github.com/Junaid522/claude-multi-agent-portfolio/blob/main/scripts/analyze.py">scripts/analyze.py</a>. Published: counts, project names, branch names and session titles. No prompt or response text. Data was last generated ${d.generated.slice(0,10)}.</div>
 
   <h2>Daily prompts</h2><svg viewBox="0 0 1000 120" preserveAspectRatio="none">${spark}</svg>
   <h2>Projects</h2>${bars(pm.map(p=>[p[0],p[1].prompts]),pmx)}
