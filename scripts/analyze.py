@@ -6,6 +6,9 @@ from datetime import datetime
 ROOT = os.path.expanduser("~/.claude/projects")
 OUT = sys.argv[1] if len(sys.argv) > 1 else "docs/stats.json"
 
+# projects left out of every count and name in the output
+EXCLUDE = {"wmc-customer-app", "maktabv2", "CRM", "Mustafa-Assignment"}
+
 def proj(d):
     d = re.sub(r"^-(Users|home)-[^-]+-", "", d)
     if "Library-Application-Support-Claude" in d: return "Claude desktop scratch"
@@ -27,7 +30,9 @@ def ts(d):
 
 for f in glob.glob(ROOT + "/**/*.jsonl", recursive=True):
     rel = os.path.relpath(f, ROOT).split(os.sep)
-    p = proj(rel[0]); is_sub = "subagents" in rel
+    p = proj(rel[0])
+    if p in EXCLUDE: continue
+    is_sub = "subagents" in rel
     sid = rel[1].replace(".jsonl", "") if not is_sub else rel[1]
     s = sessions.setdefault(sid, dict(project=p, start=None, end=None, prompts=0, turns=0, subagent_turns=0, tools=0, out_tokens=0))
     for l in open(f):

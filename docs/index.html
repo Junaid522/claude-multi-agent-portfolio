@@ -69,7 +69,7 @@ fetch('stats.json').then(r=>r.json()).then(d=>{
   <h2>When I work (local time)</h2><svg viewBox="0 0 1000 120" preserveAspectRatio="none">${hrs}</svg>
   <p class="sub" style="font-size:13px">Hour of day, 0–23, by prompts sent.</p>
   <h2>Where this account is used</h2>
-  <p class="sub">${d.platform}. ${d.versions} Claude Code versions seen across ${pm.length} projects, local workspace folders under Documents/projects (colabrex, wmc, maktabv2) and Downloads.</p>
+  <p class="sub">${d.platform}. ${d.versions} Claude Code versions seen across ${pm.length} projects, local workspace folders under Documents/projects and Downloads.</p>
   <h2>How sessions run</h2>
   <p class="sub">Permission modes: ${d.permission_modes.map(m=>m[0]+' '+f(m[1])).join(', ')}. Entry points: ${d.entrypoints.map(m=>m[0]+' '+f(m[1])).join(', ')}.</p>
   <footer>Source: local logs under ~/.claude/projects. Earlier history may exist elsewhere that was not available when this was generated.</footer>`;
