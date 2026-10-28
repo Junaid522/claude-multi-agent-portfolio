@@ -1,27 +1,105 @@
 {
- "generated": "2026-10-28T23:50:13+05:00",
- "first_day": "2026-09-10",
- "last_day": "2026-10-28",
- "active_days": 43,
- "sessions": 30,
- "prompts": 977,
- "assistant_turns": 13951,
- "subagent_turns": 8,
- "tool_calls": 5996,
- "pr_links": 9,
- "subagent_runs": 1,
+ "generated": "2026-10-29T03:47:51+05:00",
+ "first_day": "2026-08-21",
+ "last_day": "2026-10-29",
+ "active_days": 57,
+ "sessions": 44,
+ "prompts": 1367,
+ "assistant_turns": 23550,
+ "subagent_turns": 98,
+ "tool_calls": 10696,
+ "pr_links": 17,
+ "subagent_runs": 3,
  "daily": [
   {
+   "day": "2026-08-21",
+   "prompts": 5,
+   "turns": 193,
+   "tools": 139,
+   "subagent_turns": 72
+  },
+  {
+   "day": "2026-08-23",
+   "prompts": 1,
+   "turns": 6,
+   "tools": 2
+  },
+  {
+   "day": "2026-08-24",
+   "prompts": 1,
+   "turns": 4,
+   "tools": 2
+  },
+  {
+   "day": "2026-08-25",
+   "turns": 105,
+   "tools": 57
+  },
+  {
+   "day": "2026-08-26",
+   "prompts": 1,
+   "turns": 30,
+   "tools": 16
+  },
+  {
+   "day": "2026-08-27",
+   "prompts": 3,
+   "turns": 64,
+   "tools": 31
+  },
+  {
+   "day": "2026-08-31",
+   "prompts": 1,
+   "turns": 57,
+   "tools": 30
+  },
+  {
+   "day": "2026-09-01",
+   "turns": 68,
+   "tools": 26,
+   "prompts": 10
+  },
+  {
+   "day": "2026-09-04",
+   "prompts": 8,
+   "turns": 362,
+   "tools": 190
+  },
+  {
+   "day": "2026-09-05",
+   "prompts": 4,
+   "turns": 166,
+   "tools": 82
+  },
+  {
+   "day": "2026-09-07",
+   "prompts": 23,
+   "turns": 365,
+   "tools": 161
+  },
+  {
+   "day": "2026-09-08",
+   "prompts": 7,
+   "turns": 106,
+   "tools": 50
+  },
+  {
+   "day": "2026-09-09",
+   "turns": 314,
+   "prompts": 13,
+   "tools": 153
+  },
+  {
    "day": "2026-09-10",
-   "prompts": 2,
-   "turns": 10,
-   "tools": 5
+   "prompts": 10,
+   "turns": 332,
+   "tools": 182
   },
   {
    "day": "2026-09-11",
-   "prompts": 6,
-   "turns": 77,
-   "tools": 37
+   "prompts": 11,
+   "turns": 219,
+   "tools": 112
   },
   {
    "day": "2026-09-12",
@@ -31,57 +109,57 @@
   },
   {
    "day": "2026-09-14",
-   "prompts": 2,
-   "turns": 15,
-   "tools": 7
+   "prompts": 10,
+   "turns": 352,
+   "tools": 190
   },
   {
    "day": "2026-09-15",
-   "prompts": 27,
-   "turns": 184,
-   "tools": 83
+   "prompts": 31,
+   "turns": 210,
+   "tools": 95
   },
   {
    "day": "2026-09-16",
-   "prompts": 5,
-   "turns": 62,
-   "tools": 31
+   "prompts": 10,
+   "turns": 514,
+   "tools": 288
   },
   {
    "day": "2026-09-17",
-   "prompts": 30,
-   "turns": 536,
-   "tools": 248
+   "prompts": 67,
+   "turns": 1415,
+   "tools": 680
   },
   {
    "day": "2026-09-18",
-   "prompts": 24,
-   "turns": 600,
-   "tools": 268
+   "prompts": 26,
+   "turns": 671,
+   "tools": 302
   },
   {
    "day": "2026-09-19",
-   "turns": 252,
-   "tools": 89,
-   "prompts": 25
+   "turns": 366,
+   "tools": 149,
+   "prompts": 29
   },
   {
    "day": "2026-09-21",
-   "prompts": 21,
-   "turns": 226,
-   "tools": 85
+   "prompts": 24,
+   "turns": 375,
+   "tools": 161
   },
   {
    "day": "2026-09-22",
-   "turns": 268,
-   "tools": 95,
-   "prompts": 23
+   "prompts": 27,
+   "turns": 449,
+   "tools": 182
   },
   {
    "day": "2026-09-23",
-   "prompts": 68,
-   "turns": 839,
-   "tools": 340
+   "prompts": 69,
+   "turns": 888,
+   "tools": 364
   },
   {
    "day": "2026-09-24",
@@ -97,9 +175,9 @@
   },
   {
    "day": "2026-09-26",
-   "prompts": 33,
-   "turns": 400,
-   "tools": 172
+   "prompts": 42,
+   "turns": 852,
+   "tools": 417
   },
   {
    "day": "2026-09-27",
@@ -109,27 +187,28 @@
   },
   {
    "day": "2026-09-28",
-   "turns": 347,
-   "tools": 147,
-   "prompts": 25
+   "turns": 824,
+   "tools": 414,
+   "prompts": 34,
+   "subagent_turns": 18
   },
   {
    "day": "2026-09-29",
-   "turns": 580,
-   "tools": 267,
-   "prompts": 34
+   "turns": 1339,
+   "tools": 619,
+   "prompts": 52
   },
   {
    "day": "2026-09-30",
-   "turns": 628,
-   "prompts": 35,
-   "tools": 279
+   "turns": 758,
+   "prompts": 44,
+   "tools": 337
   },
   {
    "day": "2026-10-01",
-   "prompts": 18,
-   "turns": 713,
-   "tools": 324
+   "prompts": 19,
+   "turns": 716,
+   "tools": 325
   },
   {
    "day": "2026-10-02",
@@ -140,15 +219,15 @@
   },
   {
    "day": "2026-10-05",
-   "prompts": 12,
-   "turns": 44,
-   "tools": 14
+   "prompts": 14,
+   "turns": 56,
+   "tools": 18
   },
   {
    "day": "2026-10-06",
-   "prompts": 25,
-   "turns": 275,
-   "tools": 130
+   "prompts": 28,
+   "turns": 385,
+   "tools": 175
   },
   {
    "day": "2026-10-07",
@@ -158,15 +237,15 @@
   },
   {
    "day": "2026-10-08",
-   "prompts": 50,
-   "turns": 498,
-   "tools": 224
+   "prompts": 58,
+   "turns": 579,
+   "tools": 259
   },
   {
    "day": "2026-10-09",
-   "turns": 171,
-   "prompts": 24,
-   "tools": 77
+   "turns": 777,
+   "prompts": 49,
+   "tools": 369
   },
   {
    "day": "2026-10-10",
@@ -176,33 +255,33 @@
   },
   {
    "day": "2026-10-12",
-   "prompts": 4,
-   "turns": 90,
-   "tools": 44
+   "prompts": 7,
+   "turns": 190,
+   "tools": 86
   },
   {
    "day": "2026-10-13",
-   "prompts": 38,
-   "turns": 737,
-   "tools": 318
+   "prompts": 54,
+   "turns": 972,
+   "tools": 409
   },
   {
    "day": "2026-10-14",
-   "prompts": 13,
-   "turns": 574,
-   "tools": 259
+   "prompts": 23,
+   "turns": 759,
+   "tools": 328
   },
   {
    "day": "2026-10-15",
-   "turns": 323,
-   "tools": 128,
-   "prompts": 17
+   "turns": 381,
+   "tools": 150,
+   "prompts": 19
   },
   {
    "day": "2026-10-16",
-   "prompts": 6,
-   "turns": 17,
-   "tools": 5
+   "prompts": 20,
+   "turns": 170,
+   "tools": 57
   },
   {
    "day": "2026-10-17",
@@ -212,84 +291,95 @@
   },
   {
    "day": "2026-10-19",
-   "prompts": 5,
-   "turns": 11,
-   "tools": 2
+   "prompts": 7,
+   "turns": 188,
+   "tools": 98
   },
   {
    "day": "2026-10-20",
-   "prompts": 7,
-   "turns": 703,
-   "tools": 310
+   "prompts": 18,
+   "turns": 771,
+   "tools": 336
   },
   {
    "day": "2026-10-21",
-   "prompts": 41,
-   "turns": 598,
-   "tools": 219
+   "prompts": 50,
+   "turns": 718,
+   "tools": 264
   },
   {
    "day": "2026-10-22",
-   "prompts": 3,
-   "turns": 40,
-   "tools": 14
+   "prompts": 16,
+   "turns": 332,
+   "tools": 152
   },
   {
    "day": "2026-10-23",
-   "prompts": 11,
-   "turns": 116,
-   "tools": 47
+   "prompts": 18,
+   "turns": 149,
+   "tools": 59
   },
   {
    "day": "2026-10-24",
-   "prompts": 8,
-   "turns": 33,
-   "tools": 12
+   "prompts": 13,
+   "turns": 48,
+   "tools": 16
   },
   {
    "day": "2026-10-25",
-   "prompts": 1,
-   "turns": 2
+   "prompts": 10,
+   "turns": 137,
+   "tools": 61
   },
   {
    "day": "2026-10-26",
-   "prompts": 21,
-   "turns": 356,
-   "tools": 148
+   "prompts": 23,
+   "turns": 375,
+   "tools": 157
   },
   {
    "day": "2026-10-27",
-   "prompts": 10,
-   "turns": 169,
-   "tools": 72
+   "prompts": 20,
+   "turns": 335,
+   "tools": 160
   },
   {
    "day": "2026-10-28",
-   "prompts": 23,
-   "turns": 147,
-   "tools": 56
+   "prompts": 45,
+   "turns": 728,
+   "tools": 317
+  },
+  {
+   "day": "2026-10-29",
+   "prompts": 13,
+   "turns": 70,
+   "tools": 29
   }
  ],
  "tools": [
   [
    "Bash",
-   4816
+   8087
   ],
   [
    "Read",
-   446
+   1050
   ],
   [
    "Edit",
-   374
+   945
   ],
   [
    "Write",
-   148
+   341
   ],
   [
    "WebFetch",
-   35
+   44
+  ],
+  [
+   "AskUserQuestion",
+   43
   ],
   [
    "WebSearch",
@@ -297,64 +387,60 @@
   ],
   [
    "ScheduleWakeup",
-   28
-  ],
-  [
-   "AskUserQuestion",
-   28
+   30
   ],
   [
    "ToolSearch",
-   23
+   29
   ],
   [
    "Monitor",
-   19
-  ],
-  [
-   "mcp__claude_ai_Claude_Docs__update",
-   11
-  ],
-  [
-   "TaskStop",
-   8
+   21
   ],
   [
    "Skill",
-   6
+   20
   ],
   [
-   "mcp__ccd_turn__update_plan",
-   3
+   "mcp__claude_ai_Claude_Docs__update",
+   13
+  ],
+  [
+   "TaskStop",
+   9
   ],
   [
    "Artifact",
-   3
+   7
+  ],
+  [
+   "mcp__claude_ai_Claude_Docs__guide",
+   4
   ]
  ],
  "models": [
   [
    "claude-sonnet-5",
-   6839
+   13803
   ],
   [
    "claude-opus-5-5",
-   5443
+   7637
   ],
   [
    "claude-sonnet-5-5",
-   1633
+   2133
   ]
  ],
  "output_tokens_by_model": {
-  "claude-opus-5-5": 6619637,
-  "claude-sonnet-5-5": 1622536,
-  "claude-sonnet-5": 5131649
+  "claude-opus-5-5": 8563202,
+  "claude-sonnet-5-5": 2060665,
+  "claude-sonnet-5": 9631824
  },
  "permission_modes": [
   [
    "auto",
-   962
+   1352
   ],
   [
    "default",
@@ -368,7 +454,7 @@
  "entrypoints": [
   [
    "claude-vscode",
-   964
+   1354
   ],
   [
    "claude-desktop",
@@ -376,10 +462,10 @@
   ]
  ],
  "hours": [
-  114,
-  98,
-  60,
-  25,
+  183,
+  171,
+  77,
+  38,
   6,
   0,
   0,
@@ -387,19 +473,19 @@
   0,
   0,
   0,
-  0,
+  1,
   7,
-  21,
-  25,
-  36,
-  29,
-  31,
   39,
-  31,
-  82,
-  140,
-  133,
-  100
+  32,
+  37,
+  40,
+  36,
+  43,
+  34,
+  105,
+  170,
+  175,
+  173
  ],
  "projects": [
   [
@@ -459,6 +545,71 @@
    }
   ],
   [
+   "maktabv2",
+   {
+    "sessions": 10,
+    "prompts": 198,
+    "turns": 4471,
+    "tools": 2023,
+    "first": "2026-09-04",
+    "last": "2026-10-29",
+    "branches": [
+     "feature/ai-assistant",
+     "feature/learning-progress-ph2",
+     "staging",
+     "feature/learning-progress",
+     "fix/parent-email-change-when-confirmed",
+     "feature/learning-progress-ph3",
+     "feature/whatsapp-integration",
+     "feature/learning-progress-ph1"
+    ],
+    "titles": [
+     "Docker build wkhtmltopdf-binary bundle install failure",
+     "Archiving stale attendance data",
+     "E-maktab learning assessment system architecture",
+     "fetch_monthly_attendance 422 error",
+     "WhatsApp integration for school management",
+     "Rack QueryLimitError on POST /attendances",
+     "custom_field_values NoMethodError",
+     "Mac system data storage",
+     "Next steps checklist",
+     "Schema.rb multi-tenancy review",
+     "Schema.rb multi tenancy review"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "models": [
+     "claude-sonnet-5",
+     "claude-opus-5-5",
+     "claude-sonnet-5-5"
+    ],
+    "active_days": 31,
+    "top_tools": [
+     [
+      "Bash",
+      1459
+     ],
+     [
+      "Edit",
+      215
+     ],
+     [
+      "Read",
+      197
+     ],
+     [
+      "Write",
+      110
+     ],
+     [
+      "Skill",
+      12
+     ]
+    ]
+   }
+  ],
+  [
    "realm",
    {
     "sessions": 2,
@@ -499,6 +650,62 @@
      [
       "AskUserQuestion",
       9
+     ]
+    ]
+   }
+  ],
+  [
+   "CRM",
+   {
+    "sessions": 2,
+    "prompts": 166,
+    "turns": 4893,
+    "tools": 2579,
+    "first": "2026-08-21",
+    "last": "2026-10-28",
+    "branches": [
+     "crm_migration_1913_v2",
+     "asif_crm_2145",
+     "kamal_crm_2149",
+     "asif_crm_2230",
+     "asif_crm_2152_v1",
+     "asif_crm_2191",
+     "asif_crm_2147",
+     "asif_crm_2227"
+    ],
+    "titles": [
+     "Ionic serve missing module errors",
+     "Ionic serve project type error",
+     "CRM migration invalid project type"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "models": [
+     "claude-sonnet-5",
+     "claude-opus-5-5"
+    ],
+    "active_days": 30,
+    "top_tools": [
+     [
+      "Bash",
+      1723
+     ],
+     [
+      "Read",
+      403
+     ],
+     [
+      "Edit",
+      356
+     ],
+     [
+      "Write",
+      80
+     ],
+     [
+      "AskUserQuestion",
+      7
      ]
     ]
    }
@@ -739,6 +946,44 @@
    }
   ],
   [
+   "claude-multi-agent-portfolio",
+   {
+    "sessions": 1,
+    "prompts": 28,
+    "turns": 154,
+    "tools": 56,
+    "first": "2026-10-28",
+    "last": "2026-10-29",
+    "branches": [
+     "main"
+    ],
+    "titles": [
+     "GitHub Pages portfolio dashboard publishing"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "models": [
+     "claude-sonnet-5-5"
+    ],
+    "active_days": 2,
+    "top_tools": [
+     [
+      "Bash",
+      54
+     ],
+     [
+      "Write",
+      1
+     ],
+     [
+      "TaskStop",
+      1
+     ]
+    ]
+   }
+  ],
+  [
    "weather-truck-routing",
    {
     "sessions": 1,
@@ -815,40 +1060,6 @@
      [
       "Edit",
       2
-     ],
-     [
-      "Write",
-      1
-     ]
-    ]
-   }
-  ],
-  [
-   "claude-multi-agent-portfolio",
-   {
-    "sessions": 1,
-    "prompts": 15,
-    "turns": 94,
-    "tools": 36,
-    "first": "2026-10-28",
-    "last": "2026-10-28",
-    "branches": [
-     "main"
-    ],
-    "titles": [
-     "GitHub Pages portfolio dashboard publishing"
-    ],
-    "entrypoints": [
-     "claude-vscode"
-    ],
-    "models": [
-     "claude-sonnet-5-5"
-    ],
-    "active_days": 1,
-    "top_tools": [
-     [
-      "Bash",
-      35
      ],
      [
       "Write",
@@ -942,6 +1153,45 @@
      ],
      [
       "Skill",
+      1
+     ]
+    ]
+   }
+  ],
+  [
+   "wmc-customer-app",
+   {
+    "sessions": 1,
+    "prompts": 10,
+    "turns": 94,
+    "tools": 43,
+    "first": "2026-10-09",
+    "last": "2026-10-09",
+    "branches": [
+     "asif_ca_2174",
+     "ca_2026.20.1"
+    ],
+    "titles": [
+     "Dependabot alerts in wmc_customer_app"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "models": [
+     "claude-opus-5-5"
+    ],
+    "active_days": 1,
+    "top_tools": [
+     [
+      "Bash",
+      41
+     ],
+     [
+      "Read",
+      1
+     ],
+     [
+      "Write",
       1
      ]
     ]
@@ -1149,6 +1399,46 @@
    }
   ],
   [
+   "Mustafa-Assignment",
+   {
+    "sessions": 1,
+    "prompts": 3,
+    "turns": 81,
+    "tools": 35,
+    "first": "2026-10-13",
+    "last": "2026-10-14",
+    "branches": [],
+    "titles": [
+     "Assignment solution"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "models": [
+     "claude-opus-5-5"
+    ],
+    "active_days": 2,
+    "top_tools": [
+     [
+      "Bash",
+      29
+     ],
+     [
+      "Read",
+      3
+     ],
+     [
+      "Write",
+      2
+     ],
+     [
+      "ToolSearch",
+      1
+     ]
+    ]
+   }
+  ],
+  [
    "DigitalTwin-VoiceStudio",
    {
     "sessions": 1,
@@ -1179,9 +1469,21 @@
    }
   ]
  ],
- "versions": 25,
+ "versions": 37,
  "platform": "macOS (Darwin), Claude Code in VS Code and Claude desktop",
  "subagents": [
+  {
+   "type": "Explore",
+   "project": "maktabv2",
+   "task": "Audit schema vs AI tool coverage",
+   "mode": "foreground"
+  },
+  {
+   "type": "general-purpose",
+   "project": "CRM",
+   "task": "Find Win & Loss % analytics page code",
+   "mode": "background/unknown"
+  },
   {
    "type": "Explore",
    "project": "DigitalTwin-DigitalTwinCommand",
@@ -1192,6 +1494,10 @@
  "agent_tool_calls": [
   [
    "Explore",
+   2
+  ],
+  [
+   "general-purpose",
    1
   ]
  ]
