@@ -29,8 +29,11 @@ const f=n=>n.toLocaleString();
 const bars=(rows,max)=>rows.map(([k,v])=>`<div class="row"><span>${k}</span><div class="bar"><i style="width:${Math.max(2,v/max*100)}%"></i></div><span class="v">${f(v)}</span></div>`).join('');
 fetch('stats.json').then(r=>r.json()).then(d=>{
   const tools=d.tools,pm=d.projects,tm=Math.max(...tools.map(t=>t[1])),pmx=Math.max(...pm.map(p=>p[1].prompts));
-  const dm=Math.max(...d.daily.map(x=>x.prompts)),w=1000/d.daily.length;
-  const spark=d.daily.map((x,i)=>`<rect x="${i*w}" y="${120-x.prompts/dm*115}" width="${w-2}" height="${x.prompts/dm*115}" fill="#58a6ff"><title>${x.day}: ${x.prompts} prompts</title></rect>`).join('');
+  const dayMs=864e5,cal=[];for(let t=new Date(d.first_day+'T00:00:00Z'),e=new Date(d.last_day+'T00:00:00Z');t<=e;t=new Date(t.getTime()+dayMs))cal.push(t.toISOString().slice(0,10));
+  const byDay=Object.fromEntries(d.daily.map(x=>[x.day,x])),peak=d.daily.reduce((a,b)=>b.prompts>a.prompts?b:a),dm=peak.prompts,w=1000/cal.length;
+  const fmt=k=>new Date(k+'T00:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'});
+  const spark=cal.map((k,i)=>{const x=byDay[k];return x?`<rect x="${i*w+1}" y="${120-x.prompts/dm*115}" width="${Math.max(w-2,2)}" height="${x.prompts/dm*115}" fill="#58a6ff"><title>${k}: ${x.prompts} prompts</title></rect>`:''}).join('');
+  const ticks=cal.map((k,i)=>({k,i})).filter(o=>o.i===0||o.k.endsWith('-01')||o.i===cal.length-1).map(o=>`<span style="position:absolute;left:${o.i/(cal.length-1)*100}%;transform:translateX(${o.i===0?'0':o.i===cal.length-1?'-100%':'-50%'})">${fmt(o.k)}</span>`).join('');
   const hm=Math.max(...d.hours),hw=1000/24;
   const hrs=d.hours.map((v,i)=>`<rect x="${i*hw}" y="${120-v/hm*100}" width="${hw-3}" height="${v/hm*100}" fill="#3fb950"><title>${i}:00 — ${v} prompts</title></rect>`).join('');
   const models=d.models.map(([m,c])=>[m,c]);
@@ -47,7 +50,7 @@ fetch('stats.json').then(r=>r.json()).then(d=>{
    <div class="card"><div class="n">${d.pr_links}</div><div class="l">PR links</div></div>
   </div>
 
-  <h2>Daily prompts</h2><svg viewBox="0 0 1000 120" preserveAspectRatio="none">${spark}</svg>
+  <h2>Daily prompts</h2><svg viewBox="0 0 1000 120" preserveAspectRatio="none">${spark}</svg><div class="sub" style="position:relative;height:22px;font-size:12px;margin-top:4px">${ticks}</div><p class="sub" style="font-size:13px">${fmt(d.first_day)} to ${fmt(d.last_day)}. Each bar is one day; empty stretches are days with no prompts. Peak: ${dm} prompts on ${fmt(peak.day)}.</p>
   <h2>Projects</h2>${bars(pm.map(p=>[p[0],p[1].prompts]),pmx)}
   <p class="sub" style="font-size:13px">Bars show prompts per project. Details for each project below.</p>
   ${pm.map(([n,p])=>`<details class="card" style="margin:8px 0"><summary><b>${n}</b> <span class="sub">· ${p.first} → ${p.last} · ${p.active_days} days · ${p.sessions} sessions · ${f(p.prompts)} prompts · ${f(p.tools)} tool calls</span></summary>
