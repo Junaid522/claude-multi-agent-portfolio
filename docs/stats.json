@@ -1,0 +1,660 @@
+{
+ "generated": "2026-10-28T23:28:47+05:00",
+ "first_day": "2026-08-21",
+ "last_day": "2026-10-28",
+ "active_days": 56,
+ "sessions": 34,
+ "prompts": 1095,
+ "assistant_turns": 20332,
+ "subagent_turns": 98,
+ "tool_calls": 9294,
+ "pr_links": 17,
+ "subagent_runs": 3,
+ "daily": [
+  {
+   "day": "2026-08-21",
+   "prompts": 5,
+   "turns": 193,
+   "tools": 139,
+   "subagent_turns": 72
+  },
+  {
+   "day": "2026-08-23",
+   "prompts": 1,
+   "turns": 6,
+   "tools": 2
+  },
+  {
+   "day": "2026-08-24",
+   "prompts": 1,
+   "turns": 4,
+   "tools": 2
+  },
+  {
+   "day": "2026-08-25",
+   "turns": 105,
+   "tools": 57
+  },
+  {
+   "day": "2026-08-26",
+   "prompts": 1,
+   "turns": 30,
+   "tools": 16
+  },
+  {
+   "day": "2026-08-27",
+   "prompts": 3,
+   "turns": 64,
+   "tools": 31
+  },
+  {
+   "day": "2026-08-31",
+   "prompts": 1,
+   "turns": 57,
+   "tools": 30
+  },
+  {
+   "day": "2026-09-01",
+   "turns": 68,
+   "tools": 26,
+   "prompts": 10
+  },
+  {
+   "day": "2026-09-04",
+   "prompts": 8,
+   "turns": 362,
+   "tools": 190
+  },
+  {
+   "day": "2026-09-05",
+   "prompts": 4,
+   "turns": 166,
+   "tools": 82
+  },
+  {
+   "day": "2026-09-07",
+   "prompts": 23,
+   "turns": 365,
+   "tools": 161
+  },
+  {
+   "day": "2026-09-08",
+   "prompts": 7,
+   "turns": 106,
+   "tools": 50
+  },
+  {
+   "day": "2026-09-09",
+   "turns": 314,
+   "prompts": 13,
+   "tools": 153
+  },
+  {
+   "day": "2026-09-10",
+   "prompts": 10,
+   "turns": 332,
+   "tools": 182
+  },
+  {
+   "day": "2026-09-11",
+   "prompts": 11,
+   "turns": 219,
+   "tools": 112
+  },
+  {
+   "day": "2026-09-12",
+   "prompts": 6,
+   "turns": 110,
+   "tools": 55
+  },
+  {
+   "day": "2026-09-14",
+   "prompts": 10,
+   "turns": 352,
+   "tools": 190
+  },
+  {
+   "day": "2026-09-15",
+   "prompts": 7,
+   "turns": 53,
+   "tools": 25
+  },
+  {
+   "day": "2026-09-16",
+   "prompts": 10,
+   "turns": 514,
+   "tools": 288
+  },
+  {
+   "day": "2026-09-17",
+   "prompts": 59,
+   "turns": 1353,
+   "tools": 653
+  },
+  {
+   "day": "2026-09-18",
+   "prompts": 22,
+   "turns": 592,
+   "tools": 258
+  },
+  {
+   "day": "2026-09-19",
+   "turns": 366,
+   "tools": 149,
+   "prompts": 29
+  },
+  {
+   "day": "2026-09-21",
+   "prompts": 24,
+   "turns": 375,
+   "tools": 161
+  },
+  {
+   "day": "2026-09-22",
+   "prompts": 26,
+   "turns": 447,
+   "tools": 182
+  },
+  {
+   "day": "2026-09-23",
+   "prompts": 54,
+   "turns": 748,
+   "tools": 296
+  },
+  {
+   "day": "2026-09-24",
+   "prompts": 43,
+   "turns": 338,
+   "tools": 129
+  },
+  {
+   "day": "2026-09-25",
+   "prompts": 41,
+   "turns": 514,
+   "tools": 222
+  },
+  {
+   "day": "2026-09-26",
+   "prompts": 47,
+   "turns": 919,
+   "tools": 451
+  },
+  {
+   "day": "2026-09-27",
+   "prompts": 18,
+   "turns": 284,
+   "tools": 122
+  },
+  {
+   "day": "2026-09-28",
+   "turns": 859,
+   "tools": 429,
+   "prompts": 40,
+   "subagent_turns": 18
+  },
+  {
+   "day": "2026-09-29",
+   "turns": 1339,
+   "tools": 619,
+   "prompts": 52
+  },
+  {
+   "day": "2026-09-30",
+   "turns": 584,
+   "prompts": 30,
+   "tools": 266
+  },
+  {
+   "day": "2026-10-01",
+   "prompts": 14,
+   "turns": 371,
+   "tools": 183
+  },
+  {
+   "day": "2026-10-02",
+   "prompts": 58,
+   "turns": 655,
+   "tools": 267,
+   "subagent_turns": 8
+  },
+  {
+   "day": "2026-10-05",
+   "prompts": 14,
+   "turns": 56,
+   "tools": 18
+  },
+  {
+   "day": "2026-10-06",
+   "prompts": 18,
+   "turns": 242,
+   "tools": 99
+  },
+  {
+   "day": "2026-10-07",
+   "prompts": 19,
+   "turns": 168,
+   "tools": 66
+  },
+  {
+   "day": "2026-10-08",
+   "prompts": 18,
+   "turns": 187,
+   "tools": 83
+  },
+  {
+   "day": "2026-10-09",
+   "turns": 775,
+   "prompts": 47,
+   "tools": 369
+  },
+  {
+   "day": "2026-10-10",
+   "prompts": 9,
+   "turns": 239,
+   "tools": 104
+  },
+  {
+   "day": "2026-10-12",
+   "prompts": 7,
+   "turns": 190,
+   "tools": 86
+  },
+  {
+   "day": "2026-10-13",
+   "prompts": 32,
+   "turns": 620,
+   "tools": 277
+  },
+  {
+   "day": "2026-10-14",
+   "prompts": 21,
+   "turns": 737,
+   "tools": 318
+  },
+  {
+   "day": "2026-10-15",
+   "turns": 381,
+   "tools": 150,
+   "prompts": 19
+  },
+  {
+   "day": "2026-10-16",
+   "prompts": 20,
+   "turns": 170,
+   "tools": 57
+  },
+  {
+   "day": "2026-10-17",
+   "prompts": 11,
+   "turns": 185,
+   "tools": 85
+  },
+  {
+   "day": "2026-10-19",
+   "prompts": 7,
+   "turns": 188,
+   "tools": 98
+  },
+  {
+   "day": "2026-10-20",
+   "prompts": 18,
+   "turns": 771,
+   "tools": 336
+  },
+  {
+   "day": "2026-10-21",
+   "prompts": 48,
+   "turns": 559,
+   "tools": 204
+  },
+  {
+   "day": "2026-10-22",
+   "prompts": 15,
+   "turns": 295,
+   "tools": 138
+  },
+  {
+   "day": "2026-10-23",
+   "prompts": 7,
+   "turns": 33,
+   "tools": 12
+  },
+  {
+   "day": "2026-10-24",
+   "prompts": 9,
+   "turns": 26,
+   "tools": 8
+  },
+  {
+   "day": "2026-10-25",
+   "prompts": 9,
+   "turns": 135,
+   "tools": 61
+  },
+  {
+   "day": "2026-10-26",
+   "prompts": 16,
+   "turns": 344,
+   "tools": 149
+  },
+  {
+   "day": "2026-10-27",
+   "prompts": 18,
+   "turns": 259,
+   "tools": 126
+  },
+  {
+   "day": "2026-10-28",
+   "prompts": 25,
+   "turns": 608,
+   "tools": 272
+  }
+ ],
+ "tools": [
+  [
+   "Bash",
+   6944
+  ],
+  [
+   "Read",
+   938
+  ],
+  [
+   "Edit",
+   871
+  ],
+  [
+   "Write",
+   300
+  ],
+  [
+   "WebFetch",
+   44
+  ],
+  [
+   "AskUserQuestion",
+   33
+  ],
+  [
+   "WebSearch",
+   31
+  ],
+  [
+   "ScheduleWakeup",
+   30
+  ],
+  [
+   "ToolSearch",
+   27
+  ],
+  [
+   "Monitor",
+   21
+  ],
+  [
+   "Skill",
+   19
+  ],
+  [
+   "mcp__claude_ai_Claude_Docs__update",
+   8
+  ],
+  [
+   "TaskStop",
+   8
+  ],
+  [
+   "Artifact",
+   4
+  ],
+  [
+   "mcp__claude_ai_Claude_Docs__guide",
+   3
+  ]
+ ],
+ "models": [
+  [
+   "claude-sonnet-5",
+   13221
+  ],
+  [
+   "claude-opus-5-5",
+   5147
+  ],
+  [
+   "claude-sonnet-5-5",
+   1996
+  ]
+ ],
+ "output_tokens_by_model": {
+  "claude-opus-5-5": 5067285,
+  "claude-sonnet-5-5": 1967242,
+  "claude-sonnet-5": 9184517
+ },
+ "permission_modes": [
+  [
+   "auto",
+   1083
+  ],
+  [
+   "default",
+   6
+  ],
+  [
+   "acceptEdits",
+   6
+  ]
+ ],
+ "entrypoints": [
+  [
+   "claude-vscode",
+   1086
+  ],
+  [
+   "claude-desktop",
+   9
+  ]
+ ],
+ "hours": [
+  167,
+  159,
+  66,
+  28,
+  2,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  23,
+  13,
+  9,
+  19,
+  22,
+  25,
+  26,
+  79,
+  143,
+  167,
+  146
+ ],
+ "projects": [
+  [
+   "Project A",
+   {
+    "sessions": 3,
+    "prompts": 293,
+    "turns": 3057,
+    "tools": 1193
+   }
+  ],
+  [
+   "Project B",
+   {
+    "sessions": 12,
+    "prompts": 215,
+    "turns": 4634,
+    "tools": 2087
+   }
+  ],
+  [
+   "Project C",
+   {
+    "sessions": 2,
+    "prompts": 172,
+    "turns": 3476,
+    "tools": 1600
+   }
+  ],
+  [
+   "Project D",
+   {
+    "sessions": 2,
+    "prompts": 166,
+    "turns": 4893,
+    "tools": 2579
+   }
+  ],
+  [
+   "Project E",
+   {
+    "sessions": 3,
+    "prompts": 163,
+    "turns": 3368,
+    "tools": 1461
+   }
+  ],
+  [
+   "Project F",
+   {
+    "sessions": 1,
+    "prompts": 20,
+    "turns": 151,
+    "tools": 57
+   }
+  ],
+  [
+   "Project G",
+   {
+    "sessions": 1,
+    "prompts": 10,
+    "turns": 94,
+    "tools": 43
+   }
+  ],
+  [
+   "Project H",
+   {
+    "sessions": 1,
+    "prompts": 10,
+    "turns": 181,
+    "tools": 84
+   }
+  ],
+  [
+   "Project I",
+   {
+    "sessions": 1,
+    "prompts": 10,
+    "turns": 86,
+    "tools": 32
+   }
+  ],
+  [
+   "Project J",
+   {
+    "sessions": 2,
+    "prompts": 9,
+    "turns": 27,
+    "tools": 8
+   }
+  ],
+  [
+   "Project K",
+   {
+    "sessions": 1,
+    "prompts": 9,
+    "turns": 71,
+    "tools": 35
+   }
+  ],
+  [
+   "Project L",
+   {
+    "sessions": 1,
+    "prompts": 5,
+    "turns": 36,
+    "tools": 14
+   }
+  ],
+  [
+   "Project M",
+   {
+    "sessions": 1,
+    "prompts": 5,
+    "turns": 14,
+    "tools": 5
+   }
+  ],
+  [
+   "Project N",
+   {
+    "sessions": 1,
+    "prompts": 4,
+    "turns": 158,
+    "tools": 59
+   }
+  ],
+  [
+   "Project O",
+   {
+    "sessions": 1,
+    "prompts": 3,
+    "turns": 81,
+    "tools": 35
+   }
+  ],
+  [
+   "Project P",
+   {
+    "sessions": 1,
+    "prompts": 1,
+    "turns": 5,
+    "tools": 2
+   }
+  ]
+ ],
+ "subagents": [
+  {
+   "type": "Explore",
+   "project": "Project B",
+   "task": "read-only investigation",
+   "mode": "foreground"
+  },
+  {
+   "type": "general-purpose",
+   "project": "Project D",
+   "task": "read-only investigation",
+   "mode": "background/unknown"
+  },
+  {
+   "type": "Explore",
+   "project": "Project A",
+   "task": "read-only investigation",
+   "mode": "foreground"
+  }
+ ],
+ "agent_tool_calls": [
+  [
+   "Explore",
+   2
+  ],
+  [
+   "general-purpose",
+   1
+  ]
+ ]
+}

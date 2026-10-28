@@ -1,205 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIMULATED 90-day Claude Code Multi-Agent Portfolio — Junaid Tariq</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-      background: #0d1117;
-      color: #c9d1d9;
-      line-height: 1.6;
-    }
-    .header {
-      background: linear-gradient(135deg, #161b22 0%, #1a2332 100%);
-      border-bottom: 1px solid #30363d;
-      padding: 50px 20px;
-      text-align: center;
-    }
-    .header h1 {
-      color: #f0f6fc;
-      font-size: 32px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .header .subtitle {
-      color: #58a6ff;
-      font-size: 16px;
-      font-weight: 500;
-    }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin: 30px 0;
-    }
-    .stat-card {
-      background: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 12px;
-      padding: 30px 20px;
-      text-align: center;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-    .stat-card:hover {
-      transform: translateY(-2px);
-      border-color: #58a6ff;
-    }
-    .stat-card .number {
-      font-size: 48px;
-      font-weight: 700;
-      color: #58a6ff;
-      display: block;
-      line-height: 1.1;
-    }
-    .stat-card .label {
-      font-size: 13px;
-      color: #8b949e;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-top: 10px;
-      display: block;
-    }
-    .section {
-      margin: 40px 0;
-    }
-    .section h2 {
-      color: #f0f6fc;
-      border-bottom: 1px solid #30363d;
-      padding-bottom: 12px;
-      margin-bottom: 20px;
-      font-size: 22px;
-    }
-    .stack-list {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin: 20px 0;
-    }
-    .stack-badge {
-      background: #1f6feb22;
-      color: #58a6ff;
-      border: 1px solid #1f6feb44;
-      border-radius: 24px;
-      padding: 8px 20px;
-      font-size: 15px;
-      font-weight: 500;
-    }
-    .disclaimer {
-      background: #f0883e11;
-      border: 1px solid #f0883e44;
-      border-radius: 12px;
-      padding: 24px;
-      margin: 30px 0;
-    }
-    .disclaimer strong {
-      color: #f0883e;
-      display: block;
-      margin-bottom: 8px;
-      font-size: 16px;
-    }
-    .disclaimer p {
-      color: #8b949e;
-      font-size: 14px;
-      line-height: 1.7;
-    }
-    .description {
-      color: #8b949e;
-      font-size: 15px;
-      line-height: 1.8;
-      margin: 20px 0;
-    }
-    .footer {
-      text-align: center;
-      color: #484f58;
-      padding: 40px 20px;
-      font-size: 13px;
-      border-top: 1px solid #21262d;
-      margin-top: 40px;
-    }
-    .tag {
-      display: inline-block;
-      background: #da363322;
-      color: #f85149;
-      border: 1px solid #da363344;
-      border-radius: 12px;
-      padding: 4px 10px;
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code Usage Dashboard</title>
+<style>
+:root{--bg:#0d1117;--card:#161b22;--line:#30363d;--fg:#c9d1d9;--mut:#8b949e;--acc:#58a6ff;--grn:#3fb950}
+*{box-sizing:border-box;margin:0}
+body{font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--fg)}
+.wrap{max-width:1000px;margin:0 auto;padding:32px 16px}
+h1{font-size:28px;color:#f0f6fc}h2{font-size:20px;color:#f0f6fc;margin:40px 0 12px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.sub{color:var(--mut)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.n{font-size:30px;font-weight:700;color:var(--acc);line-height:1.1}.l{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:1px}
+.row{display:grid;grid-template-columns:minmax(120px,220px) 1fr 70px;gap:10px;align-items:center;font-size:14px;margin:6px 0}
+.bar{background:#21262d;border-radius:4px;height:12px}.bar i{display:block;height:100%;background:var(--acc);border-radius:4px}
+.v{text-align:right;color:var(--mut)}
+.note{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--grn);border-radius:8px;padding:14px 16px;color:var(--mut);font-size:14px;margin:16px 0}
+svg{width:100%;height:120px;display:block}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{text-align:left;padding:8px;border-bottom:1px solid var(--line)}th{color:var(--mut);font-weight:500}
+footer{color:var(--mut);font-size:13px;margin-top:40px}
+</style>
 </head>
-<body>
-  <div class="header">
-    <div class="container" style="padding-top:0;">
-      <span class="tag">⚠ SIMULATED DATA — NOT REAL</span>
-      <h1>SIMULATED 90-day Claude Code Multi-Agent Portfolio</h1>
-      <p class="subtitle">Junaid Tariq — Demonstration Dashboard</p>
-    </div>
+<body><div class="wrap" id="app"><p class="sub">Loading…</p></div>
+<script>
+const f=n=>n.toLocaleString();
+const bars=(rows,max)=>rows.map(([k,v])=>`<div class="row"><span>${k}</span><div class="bar"><i style="width:${Math.max(2,v/max*100)}%"></i></div><span class="v">${f(v)}</span></div>`).join('');
+fetch('stats.json').then(r=>r.json()).then(d=>{
+  const tools=d.tools,pm=d.projects,tm=Math.max(...tools.map(t=>t[1])),pmx=Math.max(...pm.map(p=>p[1].prompts));
+  const dm=Math.max(...d.daily.map(x=>x.prompts)),w=1000/d.daily.length;
+  const spark=d.daily.map((x,i)=>`<rect x="${i*w}" y="${120-x.prompts/dm*115}" width="${w-2}" height="${x.prompts/dm*115}" fill="#58a6ff"><title>${x.day}: ${x.prompts} prompts</title></rect>`).join('');
+  const hm=Math.max(...d.hours),hw=1000/24;
+  const hrs=d.hours.map((v,i)=>`<rect x="${i*hw}" y="${120-v/hm*100}" width="${hw-3}" height="${v/hm*100}" fill="#3fb950"><title>${i}:00 — ${v} prompts</title></rect>`).join('');
+  const models=d.models.map(([m,c])=>[m,c]);
+  document.getElementById('app').innerHTML=`
+  <h1>Claude Code Usage Dashboard</h1>
+  <p class="sub">Junaid Tariq · real activity from local Claude Code session logs, ${d.first_day} → ${d.last_day}</p>
+  <div class="grid">
+   <div class="card"><div class="n">${d.active_days}</div><div class="l">Active days</div></div>
+   <div class="card"><div class="n">${d.sessions}</div><div class="l">Sessions</div></div>
+   <div class="card"><div class="n">${f(d.prompts)}</div><div class="l">My prompts</div></div>
+   <div class="card"><div class="n">${f(d.assistant_turns)}</div><div class="l">Claude turns</div></div>
+   <div class="card"><div class="n">${f(d.tool_calls)}</div><div class="l">Tool calls</div></div>
+   <div class="card"><div class="n">${d.subagent_runs}</div><div class="l">Subagent runs</div></div>
+   <div class="card"><div class="n">${d.pr_links}</div><div class="l">PR links</div></div>
   </div>
+  <div class="note">Every number is counted from the session transcripts on this machine by <a style="color:var(--acc)" href="https://github.com/Junaid522/claude-multi-agent-portfolio/blob/main/scripts/analyze.py">scripts/analyze.py</a>. Only counts are published, never prompt or response text. Data was last generated ${d.generated.slice(0,10)}.</div>
 
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-card">
-        <span class="number">90</span>
-        <span class="label">Days Tracked</span>
-      </div>
-      <div class="stat-card">
-        <span class="number">317</span>
-        <span class="label">Simulated Sessions</span>
-      </div>
-      <div class="stat-card">
-        <span class="number">6</span>
-        <span class="label">Simulated Agents</span>
-      </div>
-    </div>
+  <h2>Daily prompts</h2><svg viewBox="0 0 1000 120" preserveAspectRatio="none">${spark}</svg>
+  <h2>Projects</h2>${bars(pm.map(p=>[p[0],p[1].prompts]),pmx)}
+  <p class="sub" style="font-size:13px">Bars show prompts per project.</p>
 
-    <div class="section">
-      <h2>Project Stack</h2>
-      <div class="stack-list">
-        <span class="stack-badge">Next.js</span>
-        <span class="stack-badge">TypeScript</span>
-        <span class="stack-badge">PostgreSQL</span>
-        <span class="stack-badge">BullMQ</span>
-      </div>
-    </div>
+  <h2>How I use multiple agents</h2>
+  <p class="sub">Multi-agent here means Claude delegating work to subagents that run in their own context window. Honest picture from the logs: ${d.subagent_runs} subagent runs so far, all for read-only investigation, so the main session stays focused on the actual changes.</p>
+  <table><tr><th>Subagent</th><th>Project</th><th>Task</th><th>Mode</th></tr>
+  ${d.subagents.map(s=>`<tr><td>${s.type}</td><td>${s.project}</td><td>${s.task}</td><td>${s.mode}</td></tr>`).join('')}</table>
+  <p class="sub" style="margin-top:12px">Alongside subagents I use <b>background scheduling</b> (ScheduleWakeup ×${(tools.find(t=>t[0]==='ScheduleWakeup')||[0,0])[1]}), <b>Monitor</b> for long-running commands, <b>Skills</b>, and <b>parallel sessions</b> across ${pm.length} projects.</p>
 
-    <div class="section">
-      <h2>About This Portfolio</h2>
-      <p class="description">
-        This dashboard presents a simulated 90-day portfolio of Claude Code multi-agent activity.
-        It showcases how a system with specialized agents collaborating on tasks could be monitored
-        and reported through an interactive dashboard.
-      </p>
-    </div>
-
-    <div class="disclaimer">
-      <strong>⚠ Critical Transparency Notice</strong>
-      <p>
-        All data presented in this portfolio is
-        <strong style="color:#f0883e">illustrative and simulated</strong>.
-        It does not represent actual historical Claude Code execution data. The metrics —
-        90 days, 317 sessions, 6 agents — are entirely fabricated for demonstration purposes.
-        No real Claude Code execution logs or actual system data have been used.
-        This portfolio exists solely to illustrate what a comprehensive multi-agent monitoring
-        dashboard could look like.
-      </p>
-    </div>
-  </div>
-
-  <div class="footer">
-    <p>Simulated portfolio dashboard — All data is illustrative, not actual Claude Code execution records.</p>
-    <p>© 2026 Junaid Tariq — Simulated Portfolio Project</p>
-  </div>
-</body>
-</html>
+  <h2>Tools Claude used</h2>${bars(tools,tm)}
+  <h2>Models</h2>${bars(models,Math.max(...models.map(m=>m[1])))}
+  <p class="sub" style="font-size:13px">Bars show assistant turns per model.</p>
+  <h2>When I work (local time)</h2><svg viewBox="0 0 1000 120" preserveAspectRatio="none">${hrs}</svg>
+  <p class="sub" style="font-size:13px">Hour of day, 0–23, by prompts sent.</p>
+  <h2>How sessions run</h2>
+  <p class="sub">Permission modes: ${d.permission_modes.map(m=>m[0]+' '+f(m[1])).join(', ')}. Entry points: ${d.entrypoints.map(m=>m[0]+' '+f(m[1])).join(', ')}.</p>
+  <footer>Source: local logs under ~/.claude/projects. Earlier history may exist elsewhere that was not available when this was generated.</footer>`;
+}).catch(e=>{document.getElementById('app').innerHTML='<p>Could not load stats.json</p>'});
+</script></body></html>
