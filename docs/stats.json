@@ -1,13 +1,13 @@
 {
- "generated": "2026-10-28T23:28:47+05:00",
+ "generated": "2026-10-28T23:31:06+05:00",
  "first_day": "2026-08-21",
  "last_day": "2026-10-28",
  "active_days": 56,
  "sessions": 34,
- "prompts": 1095,
- "assistant_turns": 20332,
+ "prompts": 1096,
+ "assistant_turns": 20340,
  "subagent_turns": 98,
- "tool_calls": 9294,
+ "tool_calls": 9298,
  "pr_links": 17,
  "subagent_runs": 3,
  "daily": [
@@ -345,15 +345,15 @@
   },
   {
    "day": "2026-10-28",
-   "prompts": 25,
-   "turns": 608,
-   "tools": 272
+   "prompts": 26,
+   "turns": 616,
+   "tools": 276
   }
  ],
  "tools": [
   [
    "Bash",
-   6944
+   6948
   ],
   [
    "Read",
@@ -423,18 +423,18 @@
   ],
   [
    "claude-sonnet-5-5",
-   1996
+   2004
   ]
  ],
  "output_tokens_by_model": {
   "claude-opus-5-5": 5067285,
-  "claude-sonnet-5-5": 1967242,
+  "claude-sonnet-5-5": 1974164,
   "claude-sonnet-5": 9184517
  },
  "permission_modes": [
   [
    "auto",
-   1083
+   1084
   ],
   [
    "default",
@@ -448,7 +448,7 @@
  "entrypoints": [
   [
    "claude-vscode",
-   1086
+   1087
   ],
   [
    "claude-desktop",
@@ -479,171 +479,718 @@
   79,
   143,
   167,
-  146
+  147
  ],
  "projects": [
   [
-   "Project A",
+   "DigitalTwin-DigitalTwinCommand",
    {
     "sessions": 3,
     "prompts": 293,
     "turns": 3057,
-    "tools": 1193
+    "tools": 1193,
+    "first": "2026-09-10",
+    "last": "2026-10-09",
+    "active_days": 21,
+    "branches": [
+     "main",
+     "feat/live-call-whisper",
+     "feat/backend-implementation",
+     "feat/user-auth",
+     "main-backup",
+     "feat/user-authentication-10-09",
+     "user-backup"
+    ],
+    "titles": [
+     "Claude tab chat context",
+     "Change commit author to talha",
+     "Change commits author to Talha313",
+     "VoiceStudio elevenlabs comparison"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "top_tools": [
+     [
+      "Bash",
+      838
+     ],
+     [
+      "Edit",
+      109
+     ],
+     [
+      "Read",
+      96
+     ],
+     [
+      "Write",
+      45
+     ],
+     [
+      "WebSearch",
+      25
+     ]
+    ],
+    "models": [
+     "claude-sonnet-5",
+     "claude-opus-5-5"
+    ]
    }
   ],
   [
-   "Project B",
+   "maktabv2",
    {
     "sessions": 12,
     "prompts": 215,
     "turns": 4634,
-    "tools": 2087
+    "tools": 2087,
+    "first": "2026-09-04",
+    "last": "2026-10-28",
+    "active_days": 31,
+    "branches": [
+     "feature/ai-assistant",
+     "feature/learning-progress-ph2",
+     "staging",
+     "feature/learning-progress",
+     "fix/parent-email-change-when-confirmed",
+     "feature/learning-progress-ph3",
+     "feature/whatsapp-integration",
+     "feature/learning-progress-ph1"
+    ],
+    "titles": [
+     "Minimum date of birth requirement check",
+     "Thank you page customizable text",
+     "Docker build wkhtmltopdf-binary bundle install failure",
+     "Archiving stale attendance data",
+     "E-maktab learning assessment system architecture",
+     "fetch_monthly_attendance 422 error",
+     "WhatsApp integration for school management",
+     "Rack QueryLimitError on POST /attendances",
+     "custom_field_values NoMethodError",
+     "Mac system data storage",
+     "Next steps checklist",
+     "Schema.rb multi-tenancy review",
+     "Schema.rb multi tenancy review"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "top_tools": [
+     [
+      "Bash",
+      1507
+     ],
+     [
+      "Edit",
+      224
+     ],
+     [
+      "Read",
+      201
+     ],
+     [
+      "Write",
+      112
+     ],
+     [
+      "Skill",
+      13
+     ]
+    ],
+    "models": [
+     "claude-opus-5-5",
+     "claude-sonnet-5",
+     "claude-sonnet-5-5"
+    ]
    }
   ],
   [
-   "Project C",
+   "realm",
    {
     "sessions": 2,
     "prompts": 172,
     "turns": 3476,
-    "tools": 1600
+    "tools": 1600,
+    "first": "2026-09-17",
+    "last": "2026-10-01",
+    "active_days": 12,
+    "branches": [],
+    "titles": [
+     "rclone-9547 trace review rework",
+     ".cursorrc instructions migration"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "top_tools": [
+     [
+      "Bash",
+      1212
+     ],
+     [
+      "Read",
+      176
+     ],
+     [
+      "Edit",
+      162
+     ],
+     [
+      "ScheduleWakeup",
+      26
+     ],
+     [
+      "AskUserQuestion",
+      9
+     ]
+    ],
+    "models": [
+     "claude-sonnet-5"
+    ]
    }
   ],
   [
-   "Project D",
+   "CRM",
    {
     "sessions": 2,
     "prompts": 166,
     "turns": 4893,
-    "tools": 2579
+    "tools": 2579,
+    "first": "2026-08-21",
+    "last": "2026-10-28",
+    "active_days": 30,
+    "branches": [
+     "crm_migration_1913_v2",
+     "asif_crm_2145",
+     "kamal_crm_2149",
+     "asif_crm_2230",
+     "asif_crm_2152_v1",
+     "asif_crm_2191",
+     "asif_crm_2147",
+     "asif_crm_2227"
+    ],
+    "titles": [
+     "Ionic serve missing module errors",
+     "Ionic serve project type error",
+     "CRM migration invalid project type"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "top_tools": [
+     [
+      "Bash",
+      1723
+     ],
+     [
+      "Read",
+      403
+     ],
+     [
+      "Edit",
+      356
+     ],
+     [
+      "Write",
+      80
+     ],
+     [
+      "AskUserQuestion",
+      7
+     ]
+    ],
+    "models": [
+     "claude-sonnet-5",
+     "claude-opus-5-5"
+    ]
    }
   ],
   [
-   "Project E",
+   "IDEALWMS",
    {
     "sessions": 3,
     "prompts": 163,
     "turns": 3368,
-    "tools": 1461
+    "tools": 1461,
+    "first": "2026-10-05",
+    "last": "2026-10-27",
+    "active_days": 18,
+    "branches": [],
+    "titles": [
+     "UI list page optimization",
+     "Backend and frontend setup",
+     "Other thread review"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "top_tools": [
+     [
+      "Bash",
+      1384
+     ],
+     [
+      "Read",
+      37
+     ],
+     [
+      "Write",
+      17
+     ],
+     [
+      "Edit",
+      11
+     ],
+     [
+      "mcp__claude_ai_Claude_Docs__update",
+      6
+     ]
+    ],
+    "models": [
+     "claude-opus-5-5",
+     "claude-sonnet-5-5"
+    ]
    }
   ],
   [
-   "Project F",
+   "weather-truck-routing",
    {
     "sessions": 1,
     "prompts": 20,
     "turns": 151,
-    "tools": 57
+    "tools": 57,
+    "first": "2026-10-15",
+    "last": "2026-10-16",
+    "active_days": 2,
+    "branches": [],
+    "titles": [
+     "Filling .env files"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "top_tools": [
+     [
+      "Bash",
+      48
+     ],
+     [
+      "WebFetch",
+      6
+     ],
+     [
+      "Edit",
+      1
+     ],
+     [
+      "Write",
+      1
+     ],
+     [
+      "ToolSearch",
+      1
+     ]
+    ],
+    "models": [
+     "claude-opus-5-5"
+    ]
    }
   ],
   [
-   "Project G",
+   "wmc-customer-app",
    {
     "sessions": 1,
     "prompts": 10,
     "turns": 94,
-    "tools": 43
+    "tools": 43,
+    "first": "2026-10-09",
+    "last": "2026-10-09",
+    "active_days": 1,
+    "branches": [
+     "asif_ca_2174",
+     "ca_2026.20.1"
+    ],
+    "titles": [
+     "Dependabot alerts in wmc_customer_app"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "top_tools": [
+     [
+      "Bash",
+      41
+     ],
+     [
+      "Read",
+      1
+     ],
+     [
+      "Write",
+      1
+     ]
+    ],
+    "models": [
+     "claude-opus-5-5"
+    ]
    }
   ],
   [
-   "Project H",
+   "Potential-project---FY26-tax-estimates",
    {
     "sessions": 1,
     "prompts": 10,
     "turns": 181,
-    "tools": 84
+    "tools": 84,
+    "first": "2026-10-17",
+    "last": "2026-10-17",
+    "active_days": 1,
+    "branches": [],
+    "titles": [
+     "Ibex 2026 tax estimate PDF generation"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "top_tools": [
+     [
+      "Bash",
+      40
+     ],
+     [
+      "Write",
+      22
+     ],
+     [
+      "Read",
+      9
+     ],
+     [
+      "WebSearch",
+      6
+     ],
+     [
+      "WebFetch",
+      3
+     ]
+    ],
+    "models": [
+     "claude-opus-5-5"
+    ]
    }
   ],
   [
-   "Project I",
+   "PromptToInvoice",
    {
     "sessions": 1,
     "prompts": 10,
     "turns": 86,
-    "tools": 32
+    "tools": 32,
+    "first": "2026-10-02",
+    "last": "2026-10-02",
+    "active_days": 1,
+    "branches": [],
+    "titles": [
+     "Project overview and tech stack"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "top_tools": [
+     [
+      "Bash",
+      27
+     ],
+     [
+      "Read",
+      2
+     ],
+     [
+      "Edit",
+      2
+     ],
+     [
+      "ToolSearch",
+      1
+     ]
+    ],
+    "models": [
+     "claude-opus-5-5"
+    ]
    }
   ],
   [
-   "Project J",
+   "Claude desktop scratch",
    {
     "sessions": 2,
     "prompts": 9,
     "turns": 27,
-    "tools": 8
+    "tools": 8,
+    "first": "2026-10-26",
+    "last": "2026-10-27",
+    "active_days": 2,
+    "branches": [],
+    "titles": [],
+    "entrypoints": [
+     "claude-desktop"
+    ],
+    "top_tools": [
+     [
+      "Bash",
+      5
+     ],
+     [
+      "ToolSearch",
+      1
+     ],
+     [
+      "WebFetch",
+      1
+     ],
+     [
+      "Skill",
+      1
+     ]
+    ],
+    "models": [
+     "claude-sonnet-5-5"
+    ]
    }
   ],
   [
-   "Project K",
+   "dontbemichael",
    {
     "sessions": 1,
     "prompts": 9,
     "turns": 71,
-    "tools": 35
+    "tools": 35,
+    "first": "2026-10-09",
+    "last": "2026-10-09",
+    "active_days": 1,
+    "branches": [
+     "main",
+     "fix/cap-office-zip-total-size"
+    ],
+    "titles": [
+     "Dontbemichael repo contribution requirements"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "top_tools": [
+     [
+      "Bash",
+      30
+     ],
+     [
+      "Edit",
+      3
+     ],
+     [
+      "Read",
+      2
+     ]
+    ],
+    "models": [
+     "claude-opus-5-5"
+    ]
    }
   ],
   [
-   "Project L",
+   "claude-multi-agent-portfolio",
    {
     "sessions": 1,
-    "prompts": 5,
-    "turns": 36,
-    "tools": 14
+    "prompts": 6,
+    "turns": 44,
+    "tools": 18,
+    "first": "2026-10-28",
+    "last": "2026-10-28",
+    "active_days": 1,
+    "branches": [
+     "main"
+    ],
+    "titles": [
+     "GitHub Pages portfolio dashboard publishing"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "top_tools": [
+     [
+      "Bash",
+      18
+     ]
+    ],
+    "models": [
+     "claude-sonnet-5-5"
+    ]
    }
   ],
   [
-   "Project M",
+   "Ibex-Dashboard-2",
    {
     "sessions": 1,
     "prompts": 5,
     "turns": 14,
-    "tools": 5
+    "tools": 5,
+    "first": "2026-10-24",
+    "last": "2026-10-27",
+    "active_days": 2,
+    "branches": [
+     "feat/prod"
+    ],
+    "titles": [
+     "Affinity_export.py .venv setup"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "top_tools": [
+     [
+      "Bash",
+      4
+     ],
+     [
+      "Read",
+      1
+     ]
+    ],
+    "models": [
+     "claude-sonnet-5-5"
+    ]
    }
   ],
   [
-   "Project N",
+   "colabrex",
    {
     "sessions": 1,
     "prompts": 4,
     "turns": 158,
-    "tools": 59
+    "tools": 59,
+    "first": "2026-10-14",
+    "last": "2026-10-15",
+    "active_days": 2,
+    "branches": [],
+    "titles": [
+     "Safe truck route app"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "top_tools": [
+     [
+      "Bash",
+      40
+     ],
+     [
+      "Write",
+      11
+     ],
+     [
+      "Read",
+      7
+     ],
+     [
+      "Edit",
+      1
+     ]
+    ],
+    "models": [
+     "claude-opus-5-5"
+    ]
    }
   ],
   [
-   "Project O",
+   "Mustafa-Assignment",
    {
     "sessions": 1,
     "prompts": 3,
     "turns": 81,
-    "tools": 35
+    "tools": 35,
+    "first": "2026-10-13",
+    "last": "2026-10-14",
+    "active_days": 2,
+    "branches": [],
+    "titles": [
+     "Assignment solution"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "top_tools": [
+     [
+      "Bash",
+      29
+     ],
+     [
+      "Read",
+      3
+     ],
+     [
+      "Write",
+      2
+     ],
+     [
+      "ToolSearch",
+      1
+     ]
+    ],
+    "models": [
+     "claude-opus-5-5"
+    ]
    }
   ],
   [
-   "Project P",
+   "DigitalTwin-VoiceStudio",
    {
     "sessions": 1,
     "prompts": 1,
     "turns": 5,
-    "tools": 2
+    "tools": 2,
+    "first": "2026-10-02",
+    "last": "2026-10-02",
+    "active_days": 1,
+    "branches": [
+     "main"
+    ],
+    "titles": [
+     "First time setup menu"
+    ],
+    "entrypoints": [
+     "claude-vscode"
+    ],
+    "top_tools": [
+     [
+      "Bash",
+      2
+     ]
+    ],
+    "models": [
+     "claude-opus-5-5"
+    ]
    }
   ]
  ],
+ "versions": 37,
+ "platform": "macOS (Darwin), Claude Code in VS Code and Claude desktop",
  "subagents": [
   {
    "type": "Explore",
-   "project": "Project B",
-   "task": "read-only investigation",
+   "project": "maktabv2",
+   "task": "Audit schema vs AI tool coverage",
    "mode": "foreground"
   },
   {
    "type": "general-purpose",
-   "project": "Project D",
-   "task": "read-only investigation",
+   "project": "CRM",
+   "task": "Find Win & Loss % analytics page code",
    "mode": "background/unknown"
   },
   {
    "type": "Explore",
-   "project": "Project A",
-   "task": "read-only investigation",
+   "project": "DigitalTwin-DigitalTwinCommand",
+   "task": "Check for existing desktop app scaffolding",
    "mode": "foreground"
   }
  ],

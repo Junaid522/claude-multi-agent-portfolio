@@ -46,11 +46,16 @@ fetch('stats.json').then(r=>r.json()).then(d=>{
    <div class="card"><div class="n">${d.subagent_runs}</div><div class="l">Subagent runs</div></div>
    <div class="card"><div class="n">${d.pr_links}</div><div class="l">PR links</div></div>
   </div>
-  <div class="note">Every number is counted from the session transcripts on this machine by <a style="color:var(--acc)" href="https://github.com/Junaid522/claude-multi-agent-portfolio/blob/main/scripts/analyze.py">scripts/analyze.py</a>. Only counts are published, never prompt or response text. Data was last generated ${d.generated.slice(0,10)}.</div>
+  <div class="note">Every number is counted from the session transcripts on this machine by <a style="color:var(--acc)" href="https://github.com/Junaid522/claude-multi-agent-portfolio/blob/main/scripts/analyze.py">scripts/analyze.py</a>. Published: counts, project names, branch names and session titles. No prompt or response text. Data was last generated ${d.generated.slice(0,10)}.</div>
 
   <h2>Daily prompts</h2><svg viewBox="0 0 1000 120" preserveAspectRatio="none">${spark}</svg>
   <h2>Projects</h2>${bars(pm.map(p=>[p[0],p[1].prompts]),pmx)}
-  <p class="sub" style="font-size:13px">Bars show prompts per project.</p>
+  <p class="sub" style="font-size:13px">Bars show prompts per project. Details for each project below.</p>
+  ${pm.map(([n,p])=>`<details class="card" style="margin:8px 0"><summary><b>${n}</b> <span class="sub">· ${p.first} → ${p.last} · ${p.active_days} days · ${p.sessions} sessions · ${f(p.prompts)} prompts · ${f(p.tools)} tool calls</span></summary>
+    <p class="sub" style="margin-top:8px">Used from: ${p.entrypoints.join(', ')||'n/a'} · Models: ${p.models.join(', ')||'n/a'}</p>
+    ${p.branches.length?`<p class="sub">Branches: ${p.branches.join(', ')}</p>`:''}
+    <p class="sub">Top tools: ${p.top_tools.map(t=>t[0]+' '+f(t[1])).join(', ')}</p>
+    ${p.titles.length?`<p style="margin-top:6px;font-size:14px">Work sessions:</p><ul style="margin-left:20px;font-size:14px;color:var(--mut)">${p.titles.map(x=>`<li>${x.replace(/</g,'&lt;')}</li>`).join('')}</ul>`:''}</details>`).join('')}
 
   <h2>How I use multiple agents</h2>
   <p class="sub">Multi-agent here means Claude delegating work to subagents that run in their own context window. Honest picture from the logs: ${d.subagent_runs} subagent runs so far, all for read-only investigation, so the main session stays focused on the actual changes.</p>
@@ -63,6 +68,8 @@ fetch('stats.json').then(r=>r.json()).then(d=>{
   <p class="sub" style="font-size:13px">Bars show assistant turns per model.</p>
   <h2>When I work (local time)</h2><svg viewBox="0 0 1000 120" preserveAspectRatio="none">${hrs}</svg>
   <p class="sub" style="font-size:13px">Hour of day, 0–23, by prompts sent.</p>
+  <h2>Where this account is used</h2>
+  <p class="sub">${d.platform}. ${d.versions} Claude Code versions seen across ${pm.length} projects, local workspace folders under Documents/projects (colabrex, wmc, maktabv2) and Downloads.</p>
   <h2>How sessions run</h2>
   <p class="sub">Permission modes: ${d.permission_modes.map(m=>m[0]+' '+f(m[1])).join(', ')}. Entry points: ${d.entrypoints.map(m=>m[0]+' '+f(m[1])).join(', ')}.</p>
   <footer>Source: local logs under ~/.claude/projects. Earlier history may exist elsewhere that was not available when this was generated.</footer>`;
