@@ -76,4 +76,14 @@ fetch('stats.json').then(r=>r.json()).then(d=>{
   <p class="sub">Permission modes: ${d.permission_modes.map(m=>m[0]+' '+f(m[1])).join(', ')}. Entry points: ${d.entrypoints.map(m=>m[0]+' '+f(m[1])).join(', ')}.</p>
   <footer>Source: local logs under ~/.claude/projects. Earlier history may exist elsewhere that was not available when this was generated.</footer>`;
 }).catch(e=>{document.getElementById('app').innerHTML='<p>Could not load stats.json</p>'});
+
+fetch('contributions.json').then(r=>r.json()).then(c=>{
+  const days=c.weeks.flatMap(w=>w.contributionDays),mx=Math.max(...days.map(x=>x.contributionCount));
+  const lvl=n=>n==0?'#21262d':n<=mx*.25?'#0e4429':n<=mx*.5?'#006d32':n<=mx*.75?'#26a641':'#39d353';
+  const cell=c.weeks.map((w,i)=>w.contributionDays.map((x,j)=>`<rect x="${i*14}" y="${j*14}" width="11" height="11" rx="2" fill="${lvl(x.contributionCount)}"><title>${x.date}: ${x.contributionCount} contributions</title></rect>`).join('')).join('');
+  const active=days.filter(x=>x.contributionCount>0).length;
+  const h=document.createElement('div');
+  h.innerHTML=`<h2>GitHub contributions, last 12 months</h2><svg viewBox="0 0 ${c.weeks.length*14} 98" style="height:auto">${cell}</svg><p class="sub" style="font-size:13px">${c.totalContributions} contributions on ${active} active days, ${days[0].date} to ${days[days.length-1].date}. Source: GitHub contribution calendar for Junaid522.</p>`;
+  document.getElementById('app').appendChild(h);
+});
 </script></body></html>
