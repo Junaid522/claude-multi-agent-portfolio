@@ -6,8 +6,9 @@ from datetime import datetime
 ROOT = os.path.expanduser("~/.claude/projects")
 OUT = sys.argv[1] if len(sys.argv) > 1 else "docs/stats.json"
 
-# projects left out of every count and name in the output
-EXCLUDE = {"wmc-customer-app", "maktabv2", "CRM", "Mustafa-Assignment"}
+# projects left out of every count and name in the output; one name per line in a local, untracked file
+_ex = os.path.join(os.path.dirname(os.path.abspath(__file__)), "exclude.txt")
+EXCLUDE = set(open(_ex).read().split()) if os.path.exists(_ex) else set()
 
 def proj(d):
     d = re.sub(r"^-(Users|home)-[^-]+-", "", d)
