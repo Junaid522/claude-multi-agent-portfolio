@@ -6,3 +6,5 @@ Real usage stats computed from local Claude Code session logs (`~/.claude/projec
 - `docs/index.html` renders the dashboard (GitHub Pages, `/docs`).
 
 Regenerate: `python3 -I scripts/analyze.py docs/stats.json`
+
+Combine several log exports into one dashboard: `python3 -I scripts/merge.py docs/stats.json a.json b.json`
